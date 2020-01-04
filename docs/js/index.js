@@ -178,4 +178,14 @@ $(document).ready(function () {
     $(".right-sidebar").slideDown(50);
     $(".right-sidebar").toggleClass('show');
   });
+
+  $('.checkboxlist').nestable();
+
+  $('.sidebar-nav :checkbox').click(function () {
+    if ($(this).is(":checked")) {
+      $('#quetsionSet').modal('show')
+    } else {
+      $('#quetsionSet').modal('hide')
+    }
+  })
 });

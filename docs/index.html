@@ -67,9 +67,9 @@
       </header>
       <aside class="left-sidebar">
         <ul class="sidebar-icon">
-          <li class="active"><a><span><img class="black" src="../images/icon-edit-b.svg"><img class="white" src="../images/icon-edit-w.svg"></span>编 辑</a>
-            <li><a><span><img class="black" src="../images/icon-style-b.svg"><img class="white" src="../images/icon-style-w.svg"></span>样 式</a></li>
-            <li><a><span><img class="black" src="../images/icon-other-b.svg"><img class="white" src="../images/icon-other-w.svg"></span>其 他</a></li>
+          <li class="active"><a><span><img class="black" src="./images/icon-edit-b.svg"><img class="white" src="./images/icon-edit-w.svg"></span>编 辑</a>
+            <li><a><span><img class="black" src="./images/icon-style-b.svg"><img class="white" src="./images/icon-style-w.svg"></span>样 式</a></li>
+            <li><a><span><img class="black" src="./images/icon-other-b.svg"><img class="white" src="./images/icon-other-w.svg"></span>其 他</a></li>
           </li>
         </ul>
         <div class="scroll-sidebar">
@@ -77,13 +77,13 @@
             <li class="nav-small-cap">已选XXX目的</li>
             <li><a>
                 <input id="basic_checkbox_1" type="checkbox" checked>
-                <label for="basic_checkbox_1">顾客满意度</label></a></li>
+                <label for="basic_checkbox_1" data-toggle="modal" data-target="#exampleModal">顾客满意度</label></a></li>
             <li><a>
                 <input id="basic_checkbox_2" type="checkbox" checked>
-                <label for="basic_checkbox_2">NPS推荐意思</label></a></li>
+                <label for="basic_checkbox_2" data-toggle="modal" data-target="#exampleModal">NPS推荐意思</label></a></li>
             <li><a>
                 <input id="basic_checkbox_3" type="checkbox" checked>
-                <label for="basic_checkbox_3">服务细项长板/短板</label></a></li>
+                <label for="basic_checkbox_3" data-toggle="modal" data-target="#exampleModal">服务细项长板/短板</label></a></li>
             <li><a>
                 <input id="basic_checkbox_4" type="checkbox" checked>
                 <label for="basic_checkbox_4">不良服务监测</label></a></li>
@@ -102,34 +102,48 @@
           <div class="rpanel-title">题目编辑修改<span><i class="ti-close right-side-toggle"></i>插入图片</span></div>
           <div class="r-panel-body">
             <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="name@example.com">
-            <ul class="m-t-20" id="themecolors">
-              <li><b>With Light sidebar</b></li>
-              <li><a class="default-theme" href="javascript:void(0)" data-theme="default">1</a></li>
-              <li><a class="green-theme" href="javascript:void(0)" data-theme="green">2</a></li>
-              <li><a class="red-theme" href="javascript:void(0)" data-theme="red">3</a></li>
-              <li><a class="blue-theme working" href="javascript:void(0)" data-theme="blue">4</a></li>
-              <li><a class="purple-theme" href="javascript:void(0)" data-theme="purple">5</a></li>
-              <li><a class="megna-theme" href="javascript:void(0)" data-theme="megna">6</a></li>
-              <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
-              <li><a class="default-dark-theme" href="javascript:void(0)" data-theme="default-dark">7</a></li>
-              <li><a class="green-dark-theme" href="javascript:void(0)" data-theme="green-dark">8</a></li>
-              <li><a class="red-dark-theme" href="javascript:void(0)" data-theme="red-dark">9</a></li>
-              <li><a class="blue-dark-theme" href="javascript:void(0)" data-theme="blue-dark">10</a></li>
-              <li><a class="purple-dark-theme" href="javascript:void(0)" data-theme="purple-dark">11</a></li>
-              <li><a class="megna-dark-theme" href="javascript:void(0)" data-theme="megna-dark">12</a></li>
-            </ul>
-            <ul class="m-t-20 chatonline">
-              <li><b>Chat option</b></li>
-              <li><a href="javascript:void(0)"><img class="img-circle" src="../assets/images/users/1.jpg" alt="user-img"> <span>Varun Dhavan <small class="text-success">online</small></span></a></li>
-              <li><a href="javascript:void(0)"><img class="img-circle" src="../assets/images/users/2.jpg" alt="user-img"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a></li>
-              <li><a href="javascript:void(0)"><img class="img-circle" src="../assets/images/users/3.jpg" alt="user-img"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a></li>
-              <li><a href="javascript:void(0)"><img class="img-circle" src="../assets/images/users/4.jpg" alt="user-img"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a></li>
-              <li><a href="javascript:void(0)"><img class="img-circle" src="../assets/images/users/5.jpg" alt="user-img"> <span>Govinda Star <small class="text-success">online</small></span></a></li>
-              <li><a href="javascript:void(0)"><img class="img-circle" src="../assets/images/users/6.jpg" alt="user-img"> <span>John Abraham<small class="text-success">online</small></span></a></li>
-              <li><a href="javascript:void(0)"><img class="img-circle" src="../assets/images/users/7.jpg" alt="user-img"> <span>Hritik Roshan<small class="text-success">online</small></span></a></li>
-              <li><a href="javascript:void(0)"><img class="img-circle" src="../assets/images/users/8.jpg" alt="user-img"> <span>Pwandeep rajan <small class="text-success">online</small></span></a></li>
-            </ul>
+            <div class="myadmin-dd-empty dd checkboxlist">
+              <ol class="dd-list">
+                <li class="dd-item dd3-item" data-id="1">
+                  <div class="dd-handle"><img src="./images/icon-move.svg" alt=""></div>
+                  <div class="dd3-content"> 
+                    <input id="side_checkbox_1" type="checkbox">
+                    <label for="side_checkbox_1">还不错</label>
+                  </div>
+                </li>
+                <li class="dd-item dd3-item" data-id="2">
+                  <div class="dd-handle"><img src="./images/icon-move.svg" alt=""></div>
+                  <div class="dd3-content">
+                    <input id="side_checkbox_2" type="checkbox">
+                    <label for="side_checkbox_2">还不错</label>
+                  </div>
+                </li>
+                <li class="dd-item dd3-item" data-id="3">
+                  <div class="dd-handle"><img src="./images/icon-move.svg" alt=""></div>
+                  <div class="dd3-content">
+                    <input id="side_checkbox_3" type="checkbox">
+                    <label for="side_checkbox_3">还不错</label>
+                  </div>
+                </li>
+                <li class="dd-item dd3-item" data-id="4">
+                  <div class="dd-handle"><img src="./images/icon-move.svg" alt=""></div>
+                  <div class="dd3-content">
+                    <input id="side_checkbox_4" type="checkbox">
+                    <label for="side_checkbox_4">还不错</label>
+                  </div>
+                </li>
+                <li class="dd-item dd3-item" data-id="5">
+                  <div class="dd-handle"><img src="./images/icon-move.svg" alt=""></div>
+                  <div class="dd3-content">
+                    <input id="side_checkbox_5" type="checkbox">
+                    <label for="side_checkbox_5">还不</label>
+                  </div>
+                </li>
+              </ol>
+            </div>
           </div>
+          <div class="rpanel-title">题目设置</div>
+          <div class="r-panel-body"></div>
         </div>
       </aside>
       <div class="page-wrapper">
@@ -209,6 +223,24 @@
                   </div>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="quetsionSet">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button class="close" type="button" data-dismiss="modal"><span>×</span></button>
+            </div>
+            <div class="modal-body">
+              ...
+              
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+              <button class="btn btn-primary" type="button">Save changes</button>
             </div>
           </div>
         </div>

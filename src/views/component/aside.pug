@@ -3,20 +3,20 @@ aside.left-sidebar
     li.active
       a
         span
-          img.black(src="../images/icon-edit-b.svg")
-          img.white(src="../images/icon-edit-w.svg")
+          img.black(src="./images/icon-edit-b.svg")
+          img.white(src="./images/icon-edit-w.svg")
         | 编 辑
       li
         a
           span
-            img.black(src="../images/icon-style-b.svg")
-            img.white(src="../images/icon-style-w.svg")
+            img.black(src="./images/icon-style-b.svg")
+            img.white(src="./images/icon-style-w.svg")
           | 样 式
       li
         a
           span
-            img.black(src="../images/icon-other-b.svg")
-            img.white(src="../images/icon-other-w.svg")
+            img.black(src="./images/icon-other-b.svg")
+            img.white(src="./images/icon-other-w.svg")
           | 其 他
   .scroll-sidebar
     ul.sidebar-nav
@@ -24,15 +24,15 @@ aside.left-sidebar
       li
         a
           input#basic_checkbox_1(type='checkbox' checked)
-          label(for='basic_checkbox_1') 顾客满意度
+          label(for='basic_checkbox_1' data-toggle="modal" data-target="#exampleModal") 顾客满意度
       li
         a
           input#basic_checkbox_2(type='checkbox' checked)
-          label(for='basic_checkbox_2') NPS推荐意思
+          label(for='basic_checkbox_2' data-toggle="modal" data-target="#exampleModal") NPS推荐意思
       li
         a
           input#basic_checkbox_3(type='checkbox' checked)
-          label(for='basic_checkbox_3') 服务细项长板/短板
+          label(for='basic_checkbox_3' data-toggle="modal" data-target="#exampleModal") 服务细项长板/短板
       li
         a
           input#basic_checkbox_4(type='checkbox' checked)
