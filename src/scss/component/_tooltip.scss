@@ -1,0 +1,22 @@
+.tooltip-inner {
+  color: $bodytext;
+  background-color: $white;
+  border: 1px solid #e2ebf6;
+  box-shadow: 0 0 20px 0 rgba(205,228,255,.74);
+}
+.tooltip .arrow::after {
+  position: absolute;
+  content: '';
+  border-color: transparent;
+  border-style: solid;
+}
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^='top'] .arrow::before {
+  top: 0;
+  border-width: .4rem .4rem 0;
+  border-top-color: #e2ebf6;
+}
+.bs-tooltip-top .arrow::after {
+  top: -1px;
+  border-width: .4rem .4rem 0;
+  border-top-color: #fff;
+}

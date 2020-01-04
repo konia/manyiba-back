@@ -1,0 +1,189 @@
+$themecolor: #1e88e5;
+$themecolor-dark: #028ee1;
+$topbar: #1e88e5;
+$themecolor-alt: #26c6da;
+/*******************
+/*Top bar
+*******************/
+.topbar {
+  .navbar-light .navbar-nav .nav-item >  {
+    a.nav-link {
+      img {
+        margin-right: 10px;
+      }
+      padding-right: 20px;
+      background: url(../images/user-arrow.svg) no-repeat center right;
+      &:hover, &:focus {
+        color: rgba($bodytext, .8)!important;
+      }
+    }
+  }
+}
+
+/*******************
+ Topbar
+*******************/
+
+.topbar {
+  position: relative;
+  z-index: 50;
+  background: $white;
+  border-bottom: 1px solid #000;
+  .fix-header & {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+  .top-navbar {
+    min-height: 90px;
+    padding: 0 36px;
+    justify-content: space-between;
+    .dropdown-toggle::after {
+      display: none;
+    }
+    .navbar-nav {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      .btn {
+        margin-right: 20px;
+      }
+    }
+    .navbar-nav > .nav-item > .nav-link {
+      padding-left: .75rem;
+      padding-right: .75rem;
+      font-size: 19px;
+      line-height: 50px;
+
+      span {
+        display: inline-block;
+        max-width: 120px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: middle;
+      }
+    }
+    .navbar-header, .navbar-user {
+      width: 200px;
+    }
+    .navbar-breadcrumb {
+      flex: 1;
+      .breadcrumb {
+        justify-content: center;
+        margin-bottom: 0;
+        background: none;
+      }
+    }
+    .navbar-navi {
+      flex: 1;
+      .navbar-icon {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+          cursor: pointer;
+          transition: background-color .15s ease-in-out;
+          border-radius: 12px;
+          + li {
+            margin-left: 60px;
+          }
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+          }
+          .black {
+            display: block;
+          }
+          .white {
+            display: none;
+          }
+          &:hover, &.active {
+            background-color: $success;
+            .black {
+              display: none;
+            }
+            .white {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .profile-pic {
+    width: 40px;
+    border-radius: 100%;
+  }
+  .dropdown-menu {
+            box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
+       -moz-box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
+    border-color: $border;
+    .dropdown-item {
+      padding: 7px 1.5rem;
+    }
+  }
+  ul.dropdown-user {
+    padding: 0;
+    width: 270px;
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      &.divider {
+        height: 1px;
+        margin: 9px 0;
+        overflow: hidden;
+        background-color: $border;
+      }
+      .dw-user-box {
+        padding: 10px 15px;
+        .u-img {
+          width: 80px;
+          display: inline-block;
+          vertical-align: top;
+          img {
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+        .u-text {
+          display: inline-block;
+          padding-left: 10px;
+          h4 {
+            margin: 0;
+          }
+          p {
+            margin-bottom: 2px;
+            font-size: 14px;
+          }
+          .btn {
+            color: $white;
+            padding: 5px 10px;
+            display: inline-block;
+            &:hover {
+              background: $danger-dark;
+            }
+          }
+        }
+      }
+      a {
+        padding: 9px 15px;
+        display: block;
+        color: $bodytext;
+        &:hover {
+          background: $light;
+          color: $themecolor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

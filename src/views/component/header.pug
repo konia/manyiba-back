@@ -1,0 +1,65 @@
+header.topbar
+  nav.navbar.top-navbar.navbar-expand-md.navbar-light
+    .navbar-header
+      a.navbar-brand(href='index.html')
+        img(src='./images/logo.svg' alt='homepage')
+    .navbar-breadcrumb
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='#') 我的项目
+        li.breadcrumb-item.active(aria-current='page') 医院门诊满意度调研
+    .navbar-navi
+      ul.navbar-icon
+        li.active
+          a
+            img.black(src="../images/icon-edit-b.svg")
+            img.white(src="../images/icon-edit-w.svg")
+        li
+          a
+            img.black(src="../images/icon-chart-b.svg")
+            img.white(src="../images/icon-chart-w.svg")
+        li
+          a
+            img.black(src="../images/icon-ring-b.svg")
+            img.white(src="../images/icon-ring-w.svg")
+        li
+          a
+            img.black(src="../images/icon-box-b.svg")
+            img.white(src="../images/icon-box-w.svg")
+        li
+          a
+            img.black(src="../images/icon-org-b.svg")
+            img.white(src="../images/icon-org-w.svg")
+    
+    .navbar-user
+      ul.navbar-nav
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle.text-muted(href data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            img.profile-pic(src='../images/user.svg' alt='user')
+            span
+              | Hi, Skent
+          .dropdown-menu.dropdown-menu-right.scale-up
+            ul.dropdown-user
+              li
+                .dw-user-box
+                  .u-img
+                    img(src='../images/user.svg' alt='user')
+                  .u-text
+                    h4 SKent
+                    p.text-muted SKent@gmail.com
+                    a.btn.btn-rounded.btn-danger.btn-sm(href='profile.html') 查看详细
+              li.divider(role='separator')
+              li
+                a(href='#')
+                  | 个人中心
+              li
+                a(href='#')
+                  | 我的账户
+              li.divider(role='separator')
+              li
+                a(href='#')
+                  | 设置
+              li.divider(role='separator')
+              li
+                a(href='#')
+                  | 退出

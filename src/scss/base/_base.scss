@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  color: $bodytext;
+  height: 100%;
+}
+
+html {
+  position: relative;
+  height: 100%;
+  background: $white;
+}
+a {
+  color: $success;
+
+  &:hover {
+    color: darken($success, 10%);
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+#main-wrapper {
+  height: 100%;
+  // position: relative;
+}
+.item_content ol {
+  // list-style: none;
+  margin: 0;
+  // padding: 0;
+}
+
+.item_content ol li {
+  height: 120px;
+  margin: 20px 0;
+}
+
+.item_content {
+  // height: 860px;
+  margin: 0 auto;
+  // position: relative;
+}
+
+.item_content .item {
+  height: 120px;
+  /* line-height: 120px; */
+  text-align: center;
+  background: #ccc;
+  border: 1px solid #000;
+  width: 100%;
+}
+
+.item_content .item .box {
+  cursor: pointer;
+  position: absolute;
+  display: none;
+}
+.item_content .item .box::before {
+  content: attr(data-tip);
+  position: absolute;
+  transform: translate(-50%,0);
+  left: 50%;
+  top: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 2px;
+  display: none;
+}
+.item_content .item .box:hover::before {
+  display: block;
+}
+.item_content .item:hover {
+  border: 1px solid #c00;
+}
+.item_content .item:hover .box {
+  display: block;
+}
+.item_content .item img {
+  width: 200px;
+  height: 120px;
+  border-radius: 6px;
+}
+
+
+.scale-up {
+  -webkit-transition: all .3s ease;
+       -o-transition: all .3s ease;
+          transition: all .3s ease;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  display: inline-block;
+  -webkit-transform-origin: right 0;
+      -ms-transform-origin: right 0;
+          transform-origin: right 0;
+}
+
+.scale-up-left {
+  -webkit-transition: all .3s ease;
+       -o-transition: all .3s ease;
+          transition: all .3s ease;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  display: inline-block;
+  -webkit-transform-origin: left 0;
+      -ms-transform-origin: left 0;
+          transform-origin: left 0;
+}
+
+.show > .scale-up {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: right 0;
+      -ms-transform-origin: right 0;
+          transform-origin: right 0;
+}
+
+.show > .scale-up-left {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: left 0;
+      -ms-transform-origin: left 0;
+          transform-origin: left 0;
+}

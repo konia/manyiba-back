@@ -1,0 +1,125 @@
+/*
+Template Name: Material Pro Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+
+/*******************
+Main sidebar
+******************/
+
+.left-sidebar {
+  position: absolute;
+  width: 320px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  padding-top: 90px;
+  background-color: $white;
+  display: flex;
+  flex-direction: row;
+  border-right: 1px solid $light-blue;
+}
+
+.fix-sidebar .left-sidebar {
+  position: fixed;
+}
+/*******************
+sidebar navigation
+******************/
+
+.sidebar-icon {
+  border-right: 1px solid $light-blue;
+  width: 90px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  li {
+    cursor: pointer;
+
+    + li {
+      margin-top: 30px;
+    }
+    a {
+      display: block;
+      text-align: center;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 42px;
+        transition: background-color .15s ease-in-out;
+        border-radius: 12px;
+      }
+    }
+    .black {
+      display: block;
+    }
+    .white {
+      display: none;
+    }
+    &:hover, &.active {
+      span {
+        background-color: $success;
+      }
+      .black {
+        display: none;
+      }
+      .white {
+        display: block;
+      }
+    }
+  }
+}
+
+.sidebar-nav {
+  padding: 15px;
+  margin: 0;
+  width: 230px;
+
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    &.nav-small-cap {
+      font-size: 12px;
+      margin-bottom: 0;
+      padding: 14px 14px 14px 20px;
+      color: $dark;
+      font-weight: 500;
+    }
+  }
+}
+.right-sidebar {
+  display: none;
+  position: absolute;
+  width: 560px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: -560px;
+  z-index: 20;
+  padding-top: 90px;
+  background-color: $white;
+  transition: all .3s ease;
+  border-left: 1px solid #d7e3f1;
+  &.show {
+    right: 0;
+    display: block;
+  }
+  .slimscrollright {
+    padding: 20px 30px;
+  }
+  .rpanel-title {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+}

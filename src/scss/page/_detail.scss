@@ -1,0 +1,232 @@
+.details {
+  section {
+    &:nth-child(odd) {
+      background-color: #f7f8fa;
+    }
+    &:nth-child(2) {
+      padding: 100px 0;
+    }
+    &:nth-child(3) {
+      padding: 65px 0;
+    }
+    &:nth-child(4) {
+      padding: 40px 0;
+      .col-md-auto > .icon {
+        display: none;
+      }
+    }
+    &:nth-child(5) {
+      padding: 100px 0;
+    }
+    &:nth-child(6) {
+      padding: 80px 0;
+    }
+    &:nth-child(7) {
+      padding: 50px 0 0;
+      .col-md-auto > .icon {
+        display: none;
+      }
+    }
+    &:nth-child(8) {
+      padding: 50px 0;
+    }
+  }
+  .row {
+    align-items: center;
+    justify-content: space-between;
+    img.slot {
+      width: 100%;
+    }
+  }
+  h2 {
+    margin: 15px 0;
+    font-size: 24px;
+    line-height: 1.5;
+    span {
+      color: #3a85ff;
+      font-size: 32px;
+    }
+  }
+  ul {
+    list-style: disc;
+    font-size: 18px;
+    line-height: 28px;
+    content: '.';
+    color: #0087ec;
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 20px;
+    p {
+      color: #66778d;
+      height: 55px;
+    }
+    .title {
+      color: $color-base;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+.detail-section {
+  background-image: url('../images/detail.png');
+  background-image: -webkit-image-set(url('../images/detail.png') 1x,url('../images/detail@2x.png') 2x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 190px;
+  padding-bottom: 120px;
+
+  h2 {
+    font-size: 36px;
+    width: 60%;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+.screen7 {
+  h2 {
+    text-align: center;
+    line-height: 2.2;
+  }
+  .icon {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  ul {
+    @include flexbox();
+    @include justify-content(center);
+    margin-bottom: 30px;
+  }
+  li {
+    + li {
+      margin-left: 50px;
+    }
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .details {
+    [class^='screen'] {
+      h2 {
+        font-size: 20px;
+        span {
+          font-size: 28px;
+        }
+      }
+    }
+    ul {
+      .title {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .details {
+    .row {
+      align-items: center;
+      justify-content: center;
+
+      .col-md-auto {
+        margin: 20px 0;
+        // width: auto;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .detail-section {
+    padding: 120px 0 60px;
+    h2 {
+      font-size: 26px;
+    }
+  }
+  .screen7 {
+    ul {
+      display: block;
+
+      li + li {
+        margin-left: 0;
+      }
+    }
+  }
+  .details {
+    h2 {
+      .icon {
+        display: none;
+      }
+    }
+    .row .col-md-auto {
+      padding: 0 25px;
+    }
+    [class^=screen] h2 {
+      margin: 10px 0;
+      font-size: 20px;
+      span {
+        font-size: 24px;
+      }
+    }
+    .icon {
+      img {
+        width: 40px;
+      }
+    }
+    li {
+      .title {
+        font-size: 15px;
+      }
+      margin-bottom: 10px;
+    }
+    section {
+      &:nth-child(2) {
+        padding: 30px 0;
+      }
+      &:nth-child(3) {
+        padding: 25px 0 10px;
+        .col-md-12 {
+          @include first-child {
+            order: 1;
+          }
+        }
+      }
+      &:nth-child(4) {
+        padding: 25px 0;
+        h2 {
+          text-align: left;
+          line-height: 1.5;
+        }
+        .col-md-auto > .icon {
+          display: block;
+        }
+      }
+      &:nth-child(5) {
+        padding: 20px 0;
+        .col-md-12 {
+          @include first-child {
+            order: 1;
+          }
+        }
+      }
+      &:nth-child(6) {
+        padding: 30px 0;
+      }
+      &:nth-child(7) {
+        padding: 30px 0 0;
+        h2 {
+          text-align: left;
+          line-height: 1.5;
+        }
+        .col-md-auto > .icon {
+          display: block;
+        }
+      }
+      &:nth-child(8) {
+        padding: 40px 0;
+      }
+    }
+  }
+}

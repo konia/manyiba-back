@@ -1,0 +1,78 @@
+@charset 'utf-8';
+
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin appearance {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+// Border Radius
+//-----------------------------------------------------
+
+@mixin border-radius($radius: $border-radius-base) {
+  @include prefixer(border-radius, $radius, webkit moz ms);
+}
+
+// box-shadow
+@mixin box-shadow($shadow...) {
+  @if length($shadow) >= 1 {
+    @include prefixer(box-shadow, $shadow);
+  } @else {
+    $shadow: 0 0 4px rgba(0,0,0,.3);
+    @include prefixer(box-shadow, $shadow);
+  }
+}
+
+// Shorthand mixin. Supports multiple parentheses-deliminated values for each variable.
+// Example: @include transition (all 2s ease-in-out);
+//          @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+//          @include transition-property (transform, opacity);
+
+@mixin transition ($properties...) {
+  @if length($properties) >= 1 {
+    @include prefixer(transition, $properties, webkit moz);
+  }
+
+  @else {
+    $properties: all .15s ease-out 0s;
+    @include prefixer(transition, $properties, webkit moz);
+  }
+}
+
+@mixin transition-property ($properties...) {
+  @include prefixer(transition-property, $properties, webkit moz);
+}
+
+@mixin transition-duration ($times...) {
+  @include prefixer(transition-duration, $times, webkit moz);
+}
+
+@mixin transition-timing-function ($motions...) {
+  // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+  @include prefixer(transition-timing-function, $motions, webkit moz);
+}
+
+@mixin transition-delay ($times...) {
+  @include prefixer(transition-delay, $times, webkit moz);
+}
+@mixin clearfix() {
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
