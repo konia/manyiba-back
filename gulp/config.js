@@ -1,5 +1,5 @@
 var src = 'src';
-var build = 'dist';
+var build = 'doc';
 module.exports = {
   browsersync: {
     server: {
