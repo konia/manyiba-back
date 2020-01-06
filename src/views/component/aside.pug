@@ -22,30 +22,34 @@ aside.left-sidebar
             img.white(src="./images/icon-other-w.svg")
           | 其 他
   .scroll-sidebar
+    .go-back
+      img(src="./images/icon-arrow.svg", alt="")
+      | 返回全部商业目的
     ul.sidebar-nav
-      li.nav-small-cap 已选XXX目的
+      li.nav-small-cap
+        img(src="./images/icon-selected.svg", alt="")
+        | 已选商业目的
       li
-        a
-          input#basic_checkbox_1(type='checkbox' checked)
-          label(for='basic_checkbox_1' data-toggle="modal" data-target="#exampleModal") 顾客满意度
+        span(data-toggle="modal" data-target="#quetsionSet") 顾客满意度
+        img(src="./images/icon-del-b.svg", alt="")
       li
-        a
-          input#basic_checkbox_2(type='checkbox' checked)
-          label(for='basic_checkbox_2' data-toggle="modal" data-target="#exampleModal") NPS推荐意思
+        span(data-toggle="modal" data-target="#quetsionSet") NPS推荐意思
+        img(src="./images/icon-del-b.svg", alt="")
+
       li
-        a
-          input#basic_checkbox_3(type='checkbox' checked)
-          label(for='basic_checkbox_3' data-toggle="modal" data-target="#exampleModal") 服务细项长板/短板
+        span(data-toggle="modal" data-target="#quetsionSet") 服务细项长板/短板
+        img(src="./images/icon-del-b.svg", alt="")
+
       li
-        a
-          input#basic_checkbox_4(type='checkbox' checked)
-          label(for='basic_checkbox_4') 不良服务监测
-      li.nav-small-cap 备选XX目的
+        span(data-toggle="modal" data-target="#quetsionSet") 不良服务监测
+        img(src="./images/icon-del-b.svg", alt="")
+      li.nav-small-cap
+        img(src="./images/icon-select.svg", alt="")
+        | 备选商业目的
       li
-        a
-          input#basic_checkbox_5(type='checkbox')
-          label(for='basic_checkbox_5') 顾客画像
+        span 顾客画像
+        img(src="./images/icon-del-b.svg", alt="")
+
       li
-        a
-          input#basic_checkbox_6(type='checkbox')
-          label(for='basic_checkbox_6') 企业舆情与行业动态
+        span 企业舆情与行业动态
+        img(src="./images/icon-del-b.svg", alt="")

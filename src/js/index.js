@@ -180,12 +180,4 @@ $(document).ready(function () {
   });
 
   $('.checkboxlist').nestable();
-
-  $('.sidebar-nav :checkbox').click(function () {
-    if ($(this).is(":checked")) {
-      $('#quetsionSet').modal('show')
-    } else {
-      $('#quetsionSet').modal('hide')
-    }
-  })
 });

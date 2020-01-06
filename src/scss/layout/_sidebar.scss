@@ -93,22 +93,56 @@ sidebar navigation
     }
   }
 }
-
+.scroll-sidebar {
+  .go-back {
+    color: $success;
+    padding: 15px 15px 9px;
+    font-size: 12px;
+    img {
+      margin-right: 8px;
+    }
+  }
+}
 .sidebar-nav {
-  padding: 15px;
+  padding-bottom: 15px;
   margin: 0;
   width: 230px;
 
   li {
     list-style: none;
-    margin-bottom: 10px;
-    padding: 10px;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     &.nav-small-cap {
+      display: block;
       font-size: 12px;
       margin-bottom: 0;
-      padding: 14px 14px 14px 20px;
-      color: $dark;
-      font-weight: 500;
+      padding: 9px 15px;
+      color: #333e48;
+      &:not(:first-child) {
+        margin-top: 40px;
+      }
+      img {
+        display: inline-block;
+        margin-right: 8px;
+        margin-top: -4px;
+      }
+    }
+    img {
+      display: none;
+    }
+    &:not(.nav-small-cap):hover {
+      background-color: #f2faf7;
+      img {
+        display: block;
+      }
+    }
+    span {
+      &:hover {
+        cursor: pointer;
+        color: $success;
+      }
     }
   }
 }
