@@ -190,6 +190,28 @@ sidebar navigation
       text-align: right;
       margin-top: 5px;
     }
+    .form-row {
+      margin-left: 20px;
+      .form-control {
+        color: #7b8288;
+        margin-bottom: 0;
+        border-color: #e7eef6;
+        background-color: #fbfbfd;
+      }
+    }
+    .form-group {
+      margin-bottom: 0;
+      &:last-child {
+        font-size: 0;
+      }
+    }
+    .option {
+      margin-left: 24px;
+      li {
+        margin: 20px 0;
+        font-size: 14px;
+      }
+    }
   }
   .rpanel-action {
     margin: 10px;
@@ -213,5 +235,8 @@ sidebar navigation
         color: #60c171;
       }
     }
+  }
+  .r-panel-footer {
+    padding: 20px;
   }
 }

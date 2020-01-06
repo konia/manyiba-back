@@ -178,6 +178,10 @@ $(document).ready(function () {
     $(".right-sidebar").slideDown(50);
     $(".right-sidebar").toggleClass('show');
   });
+  $(".r-panel-footer .btn").click(function () {
+    $(".right-sidebar").slideDown(50);
+    $(".right-sidebar").toggleClass('show');
+  });
 
   $('.checkboxlist').nestable();
 });

@@ -95,3 +95,71 @@ aside.right-sidebar
     .rpanel-title
       | 题目设置
     .r-panel-body
+      ul.option
+        li
+          input#side_checkbox_5(type='checkbox')
+          label(for='side_checkbox_5') 在此题后分页
+        li
+          input#side_checkbox_6(type='checkbox')
+          label(for='side_checkbox_6') 将此题设置为必答
+        li
+          input#side_checkbox_7(type='checkbox')
+          label(for='side_checkbox_7') 设置可选项数量
+        li
+          .form-row
+            .form-group.col-md-5
+              select.form-control
+                option 请选择最少数量
+                option 2
+                option 3
+                option 4
+                option 5
+            .form-group.col-md-5
+              select.form-control
+                option 请选择最多数量
+                option 2
+                option 3
+                option 4
+                option 5
+            .form-group.col-md-2
+        li
+          input#side_checkbox_8(type='checkbox')
+          label(for='side_checkbox_8') 选项随机展示
+        li
+          input#side_checkbox_9(type='checkbox')
+          label(for='side_checkbox_9') 题目跳转
+        li
+          .form-row
+            .form-group.col-md-5
+              select.form-control
+                option 请选择当前题目
+                option 2
+                option 3
+                option 4
+                option 5
+            .form-group.col-md-5
+              select.form-control
+                option 请选择跳转至
+                option 2
+                option 3
+                option 4
+                option 5
+            .form-group.col-md-2
+              button.btn.btn-circle.btn-small
+                img(src="./images/icon-plus-b.svg", alt="")
+              button.btn.btn-circle.btn-small
+                img(src="./images/icon-del-b.svg", alt="")
+    .r-panel-footer
+      button.btn.btn-success(type='button') 保存修改
+      button.btn.btn-outline(type='button') 取消选择
+
+          
+
+
+
+
+
+
+
+
+
