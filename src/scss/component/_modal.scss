@@ -1,0 +1,58 @@
+.modal-dialog {
+  width: 900px;
+}
+.modal-content {
+  padding: 4px 20px;
+}
+.modal-header {
+  border-bottom: 1px solid #ccf2e2;
+  padding-right: 0;
+  padding-left: 0;
+  .icon-round {
+    margin-right: 10px;
+  }
+  .modal-title {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .select {
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+.modal-body {
+  .modal-body-title {
+    font-size: 14px;
+    margin-bottom: 15px;
+    img {
+      margin-right: 13px;
+    }
+  }
+  .modal-body-li {
+    margin-bottom: 20px;
+    li {
+      display: inline-block;
+      width: 49%;
+      margin-bottom: 10px;
+    }
+    .range {
+      margin-top: 5px;
+      margin-left: 25px;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.modal-footer {
+  justify-content: center;
+  .btn {
+    width: 140px;
+    margin: 0 10px;
+  }
+  .btn-outline {
+    color: $success;
+    border: 1px solid currentColor;
+  }
+}

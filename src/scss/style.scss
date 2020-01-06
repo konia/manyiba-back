@@ -2,7 +2,7 @@
 @import './base/prefixer', './base/variables', './base/mixins', './base/base', './util/family', './util/flex-box';
 @import './layout/header', './layout/sidebar', './layout/main';
 
-@import './component/card', './component/button', './component/checkbox', './component/tooltip', './component/form', './component/nestable';
+@import './component/card', './component/button', './component/checkbox', './component/tooltip', './component/form', './component/nestable', './component/modal';
 @import './page/page', './page/detail';
 
 @import './responsive/media@1200';

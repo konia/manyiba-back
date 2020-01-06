@@ -167,7 +167,7 @@ p {
     left: 0;
     right: 0; }
   .topbar .top-navbar {
-    min-height: 90px;
+    min-height: 70px;
     padding: 0 36px;
     justify-content: space-between; }
     .topbar .top-navbar .dropdown-toggle::after {
@@ -317,7 +317,7 @@ Main sidebar
   top: 0;
   bottom: 0;
   z-index: 20;
-  padding-top: 90px;
+  padding-top: 70px;
   background-color: #fff;
   display: flex;
   flex-direction: row;
@@ -421,7 +421,7 @@ sidebar navigation
   bottom: 0;
   right: -560px;
   z-index: 20;
-  padding-top: 90px;
+  padding-top: 70px;
   background-color: #fff;
   transition: all .3s ease;
   border-left: 1px solid #d7e3f1; }
@@ -436,7 +436,7 @@ sidebar navigation
 
 .page-wrapper {
   background: #f2faf7;
-  padding-top: 90px;
+  padding-top: 70px;
   margin-left: 320px;
   min-height: 100%; }
 
@@ -447,7 +447,7 @@ sidebar navigation
 
 .page-titles {
   display: flex;
-  padding: 15px 0; }
+  padding-bottom: 15px; }
   .page-titles h3 {
     margin-bottom: 0;
     margin-top: 8px; }
@@ -472,7 +472,7 @@ sidebar navigation
  Card title
 *******************/
 .questions ul li {
-  margin: 30px 0;
+  margin: 10px 0;
   height: 130px; }
 
 .main-title {
@@ -781,6 +781,52 @@ sidebar navigation
 .dd3-handle:hover {
   background: #404040;
   border: 1px solid #404040; }
+
+.modal-dialog {
+  width: 900px; }
+
+.modal-content {
+  padding: 4px 20px; }
+
+.modal-header {
+  border-bottom: 1px solid #ccf2e2;
+  padding-right: 0;
+  padding-left: 0; }
+  .modal-header .icon-round {
+    margin-right: 10px; }
+  .modal-header .modal-title {
+    font-size: 14px;
+    font-weight: normal; }
+  .modal-header .select {
+    font-size: 14px;
+    font-weight: normal; }
+
+.modal-body .modal-body-title {
+  font-size: 14px;
+  margin-bottom: 15px; }
+  .modal-body .modal-body-title img {
+    margin-right: 13px; }
+
+.modal-body .modal-body-li {
+  margin-bottom: 20px; }
+  .modal-body .modal-body-li li {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 10px; }
+  .modal-body .modal-body-li .range {
+    margin-top: 5px;
+    margin-left: 25px; }
+    .modal-body .modal-body-li .range img {
+      margin-right: 10px; }
+
+.modal-footer {
+  justify-content: center; }
+  .modal-footer .btn {
+    width: 140px;
+    margin: 0 10px; }
+  .modal-footer .btn-outline {
+    color: #00bf6f;
+    border: 1px solid currentColor; }
 
 .details section:nth-child(odd) {
   background-color: #f7f8fa; }
