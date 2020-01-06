@@ -141,17 +141,18 @@ p {
   -ms-transform-origin: left 0;
   transform-origin: left 0; }
 
+.icon-round {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ccf2e2;
+  border-radius: 50%; }
+
 /*******************
 /*Top bar
 *******************/
-.topbar .navbar-light .navbar-nav .nav-item > a.nav-link {
-  padding-right: 20px;
-  background: url(../images/user-arrow.svg) no-repeat center right; }
-  .topbar .navbar-light .navbar-nav .nav-item > a.nav-link img {
-    margin-right: 10px; }
-  .topbar .navbar-light .navbar-nav .nav-item > a.nav-link:hover, .topbar .navbar-light .navbar-nav .nav-item > a.nav-link:focus {
-    color: rgba(51, 62, 72, 0.8) !important; }
-
 /*******************
  Topbar
 *******************/
@@ -188,14 +189,24 @@ p {
         white-space: nowrap;
         overflow: hidden;
         vertical-align: middle; }
-    .topbar .top-navbar .navbar-header, .topbar .top-navbar .navbar-user {
-      width: 200px; }
-    .topbar .top-navbar .navbar-breadcrumb {
-      flex: 1; }
-      .topbar .top-navbar .navbar-breadcrumb .breadcrumb {
-        justify-content: center;
-        margin-bottom: 0;
-        background: none; }
+    .topbar .top-navbar .navbar-header, .topbar .top-navbar .navbar-user, .topbar .top-navbar .navbar-breadcrumb {
+      width: 300px; }
+    .topbar .top-navbar .navbar-breadcrumb .breadcrumb {
+      padding: 0;
+      margin-bottom: 0;
+      background: none; }
+      .topbar .top-navbar .navbar-breadcrumb .breadcrumb a {
+        display: inline-block; }
+      .topbar .top-navbar .navbar-breadcrumb .breadcrumb .breadcrumb-item span:not(.icon-round) {
+        display: inline-block; }
+      .topbar .top-navbar .navbar-breadcrumb .breadcrumb .breadcrumb-item span:first-child {
+        margin-right: 10px; }
+      .topbar .top-navbar .navbar-breadcrumb .breadcrumb .breadcrumb-item.active span {
+        max-width: 140px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: middle; }
     .topbar .top-navbar .navbar-navi {
       flex: 1; }
       .topbar .top-navbar .navbar-navi .navbar-icon {

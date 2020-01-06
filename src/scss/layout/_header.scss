@@ -5,20 +5,7 @@ $themecolor-alt: #26c6da;
 /*******************
 /*Top bar
 *******************/
-.topbar {
-  .navbar-light .navbar-nav .nav-item >  {
-    a.nav-link {
-      img {
-        margin-right: 10px;
-      }
-      padding-right: 20px;
-      background: url(../images/user-arrow.svg) no-repeat center right;
-      &:hover, &:focus {
-        color: rgba($bodytext, .8)!important;
-      }
-    }
-  }
-}
+
 
 /*******************
  Topbar
@@ -64,15 +51,34 @@ $themecolor-alt: #26c6da;
         vertical-align: middle;
       }
     }
-    .navbar-header, .navbar-user {
-      width: 200px;
+    .navbar-header, .navbar-user, .navbar-breadcrumb {
+      width: 300px;
     }
     .navbar-breadcrumb {
-      flex: 1;
       .breadcrumb {
-        justify-content: center;
+        padding: 0;
         margin-bottom: 0;
         background: none;
+        a {
+          display: inline-block;
+        }
+        .breadcrumb-item {
+          span:not(.icon-round) {
+            display: inline-block;
+          }
+          span:first-child {
+            margin-right: 10px;
+          }
+          &.active {
+            span {
+              max-width: 140px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              vertical-align: middle;
+            }
+          }
+        }
       }
     }
     .navbar-navi {

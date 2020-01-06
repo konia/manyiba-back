@@ -134,3 +134,12 @@ p {
       -ms-transform-origin: left 0;
           transform-origin: left 0;
 }
+.icon-round {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ccf2e2;
+  border-radius: 50%;
+}
