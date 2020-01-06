@@ -6,14 +6,19 @@
 }
 .container-fluid {
   padding: 16px;
-  width: 80%;
+  width: calc(100% - 240px);
   margin: 0;
+  // position: relative;
 }
 
 
 .page-titles {
+  // position: fixed;
   display: flex;
   padding: 15px 0;
+  // left: 320px;
+  // right: 255px;
+  // top: 106px;
   h3 {
     margin-bottom: 0;
     margin-top: 8px;
@@ -40,3 +45,6 @@
     }
   }
 }
+// .page-main {
+//   padding-top: 65px;
+// }

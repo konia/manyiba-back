@@ -66,11 +66,25 @@ sidebar navigation
     .white {
       display: none;
     }
-    &:hover, &.active {
+    .green {
+      display: none;
+    }
+    &:hover {
+      .black {
+        display: none;
+      }
+      .green {
+        display: block;
+      }
+    }
+    &.active {
       span {
         background-color: $success;
       }
       .black {
+        display: none;
+      }
+      .green {
         display: none;
       }
       .white {

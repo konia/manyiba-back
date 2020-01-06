@@ -110,9 +110,23 @@ $themecolor-alt: #26c6da;
           .white {
             display: none;
           }
-          &:hover, &.active {
+          .green {
+            display: none;
+          }
+          &:hover {
+            .black {
+              display: none;
+            }
+            .green {
+              display: block;
+            }
+          }
+          &.active {
             background-color: $success;
             .black {
+              display: none;
+            }
+            .green {
               display: none;
             }
             .white {

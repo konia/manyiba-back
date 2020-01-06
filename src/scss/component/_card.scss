@@ -51,7 +51,11 @@
         outline: 0 none;
       }
     }
+    h3 {
+      margin-bottom: 20px;
+    }
     h6:focus {
+      margin-bottom: 0;
       + .count {
         display: block;
       }
@@ -71,7 +75,6 @@
   }
   .card-subtitle {
     font-weight: 300;
-    margin-bottom: 15px;
     color: $muted;
   }
   .card-action {
