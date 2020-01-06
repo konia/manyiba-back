@@ -5,7 +5,7 @@
   padding: 0;
   max-width: 600px;
   list-style: none;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 20px;
 }
 
@@ -26,27 +26,54 @@
 .dd-item, .dd-empty, .dd-placeholder {
   display: block;
   position: relative;
-  margin: 10px 0;
+  margin: 2px 0;
   padding: 0;
   min-height: 20px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 20px;
+  img {
+    display: none;
+  }
+  &:hover {
+    .dd-insert-img {
+      display: block;
+    }
+    img {
+      display: inline-block;
+    }
+  }
 }
 .dd-item {
   display: flex;
+  justify-content: space-between;
 }
 .dd-handle {
   display: block;
   height: 30px;
+  width: 24px;
   margin: 5px 0;
-  padding: 5px 10px;
+  padding: 5px;
   cursor: move;
 }
-.dd-handle:hover {
-  color: #317eeb;
-  background: #fff;
+.dd-insert-img {
+  display: none;
+  float: right;
+  font-size: 14px;
+  margin-top: -34px;
+  .icon-round {
+    vertical-align: middle;
+    margin-top: -4px;
+    margin-right: 5px;
+    img {
+      display: block;
+    }
+  }
+  padding: 5px 10px;
 }
-
+.dd-del {
+  padding: 8px 10px;
+  width: 34px;
+}
 .dd-placeholder, .dd-empty {
   margin: 5px 0;
   padding: 0;
@@ -79,14 +106,41 @@
 
 
 .dd3-content {
-  display: block;
+  flex: 1;
   height: 30px;
   margin: 5px 0;
-  padding: 5px;
-}
-.dd3-content:hover {
-  color: #317eeb;
-  background: #fff;
+
+  label {
+    margin-top: 4px;
+    float: left;
+    height: 34px;
+    width: 20px;
+    outline: 0 none;
+
+    &::before {
+      left: 2px;
+      top: 8px;
+    }
+    &::after {
+      left: 0;
+      top: 5px;
+    }
+  }
+  .text {
+    padding: 8px 6px;
+    border: 1px dashed $white;
+    &:hover {
+      border: 1px dashed $success;
+    }
+    overflow: hidden;
+    width: 415px;
+    padding-right: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &:focus {
+      outline: 0 none;
+    }
+  }
 }
 
 .dd-dragel > .dd3-item > .dd3-content {

@@ -1,4 +1,9 @@
 .form-control {
-  border: 1px solid #000;
+  border: 1px solid #ddd;
   height: 36px;
+  &:focus {
+    border: 1px solid $success;
+    background-color: #fbfbfd;
+    box-shadow: none;
+  }
 }
