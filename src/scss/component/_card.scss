@@ -8,29 +8,52 @@
     height: 130px;
   }
 }
+.main-title {
+  position: relative;
+  .card {
+    height: auto;
+  }
+  .count {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    text-align: right;
+    font-size: 12px;
+  }
+}
 .card {
-  // width: 100%;
-  border: 1px solid #e2ebf6;
+  background: $white;
+  border: 1px solid $green-light;
+  box-shadow: 0 7px 10px 0 rgba(174,232,208,.42);
+  border-radius: 4px;
   height: 130px;
   .questions & {
     &:hover {
+      box-shadow: none;
       border: 1px solid $success;
+      border-bottom: 4px solid $success;
       .card-action {
         display: block;
       }
     }
   }
-
   .main-title-content {
     text-align: center;
 
     h3, h6 {
-      border: 1px solid #fff;
+      color: #333;
+      padding: 5px;
       &:hover, &:focus {
-        border: 1px dashed #000;
+        background-color: rgba(#d8d8d8, .21);
       }
       &:focus {
         outline: 0 none;
+      }
+    }
+    h6:focus {
+      + .count {
+        display: block;
       }
     }
   }
@@ -57,7 +80,32 @@
     top: 10px;
     right: 15px;
     span {
-      margin-left: 10px;
+      margin-left: 20px;
+      padding-left: 20px;
+      color: #a4b9a7;
+      background: no-repeat left center;
+      &:nth-child(1) {
+        background-image: url('../images/icon-move-b.svg');
+      }
+      &:nth-child(2) {
+        background-image: url('../images/icon-logic-b.svg');
+      }
+      &:nth-child(3) {
+        background-image: url('../images/icon-del-b.svg');
+      }
+      &:hover {
+        cursor: pointer;
+        color: $success;
+        &:nth-child(1) {
+          background-image: url('../images/icon-move-w.svg');
+        }
+        &:nth-child(2) {
+          background-image: url('../images/icon-logic-w.svg');
+        }
+        &:nth-child(3) {
+          background-image: url('../images/icon-del-w.svg');
+        }
+      }
     }
   }
 }

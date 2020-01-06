@@ -15,7 +15,7 @@ $themecolor-alt: #26c6da;
   position: relative;
   z-index: 50;
   background: $white;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $green-light;
   .fix-header & {
     position: fixed;
     left: 0;

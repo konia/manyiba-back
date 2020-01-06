@@ -21,7 +21,7 @@ Main sidebar
   background-color: $white;
   display: flex;
   flex-direction: row;
-  border-right: 1px solid $light-blue;
+  border-right: 1px solid $green-light;
 }
 
 .fix-sidebar .left-sidebar {
@@ -32,7 +32,7 @@ sidebar navigation
 ******************/
 
 .sidebar-icon {
-  border-right: 1px solid $light-blue;
+  border-right: 1px solid $green-light;
   width: 90px;
   margin: 0;
   padding: 0;
