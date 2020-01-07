@@ -34,22 +34,22 @@
     &::before {
       position: absolute;
       content: '分页';
-      font-size: 14px;
+      font-size: 10px;
       color: $white;
       z-index: 1;
       transform: rotate(-45deg);
-      left: 1px;
-      top: 4px;
+      left: 0;
+      top: 3px;
     }
     &::after {
       content: '';
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
       display: block;
       background-color: $success;
       position: absolute;
-      left: -30px;
-      top: -30px;
+      left: -20px;
+      top: -20px;
       transform: rotate(45deg);
     }
   }
