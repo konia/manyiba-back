@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Template Name: Material Pro Admin
 Author: Themedesigner
@@ -543,6 +544,28 @@ sidebar navigation
   box-shadow: 0 7px 10px 0 rgba(174, 232, 208, 0.42);
   border-radius: 4px;
   height: 130px; }
+  .card.pagination {
+    overflow: hidden;
+    position: relative; }
+    .card.pagination::before {
+      position: absolute;
+      content: '分页';
+      font-size: 14px;
+      color: #fff;
+      z-index: 1;
+      transform: rotate(-45deg);
+      left: 1px;
+      top: 4px; }
+    .card.pagination::after {
+      content: '';
+      width: 60px;
+      height: 60px;
+      display: block;
+      background-color: #00bf6f;
+      position: absolute;
+      left: -30px;
+      top: -30px;
+      transform: rotate(45deg); }
   .questions .card:hover {
     box-shadow: none;
     border: 1px solid #00bf6f;
